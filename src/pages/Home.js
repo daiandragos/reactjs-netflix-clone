@@ -1,12 +1,12 @@
 import React from "react";
-import Nav from "../Nav";
-import Banner from "../Banner";
-import Row from "../Row";
+import Nav from "../components/Nav";
+import Banner from "../components/Banner";
+import Row from "../components/Row";
 
-import "./HomeScreen.css";
+import "./Home.css";
 import requests from "../Requests";
 
-const HomeScreen = () => {
+const Home = () => {
   return (
     <div className="homeScreen">
       <Nav />
@@ -14,8 +14,8 @@ const HomeScreen = () => {
       <Banner />
 
       <Row
-        title="NETFLIX ORIGINALS"
-        fetchUrl={requests.fetchNetflixOriginals}
+        title="ORIGINALS"
+        fetchUrl={requests.fetchOriginals}
         isLargeRow
       />
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
@@ -29,4 +29,4 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default Home;

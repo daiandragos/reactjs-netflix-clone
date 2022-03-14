@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Row.css";
 
-import axios from "./axios";
+import axios from "../axios";
 
 const Row = ({ title, fetchUrl, isLargeRow = false }) => {
   const [movies, setMovies] = useState([]);
@@ -29,7 +29,7 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
             ((isLargeRow && movie.poster_path) ||
               (!isLargeRow && movie.backdrop_path)) && (
               <img
-                className={`row__poster ${isLargeRow && "row__posterLarge"}`}
+                className={`row__poster ${isLargeRow && "row__poster-large"}`}
                 key={movie.id}
                 src={`${base_url}${
                   isLargeRow ? movie.poster_path : movie.backdrop_path

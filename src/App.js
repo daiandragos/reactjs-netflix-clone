@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import HomeScreen from "./screens/HomeScreen";
-import LoginScreen from "./screens/LoginScreen";
-import ProfileScreen from "./screens/ProfileScreen";
+import HomeScreen from "./pages/Home";
+import LoginScreen from "./pages/Login";
+import ProfileScreen from "./pages/Profile";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
@@ -40,7 +40,6 @@ function App() {
         ) : (
           <Routes>
             <Route path="/profile" element={<ProfileScreen />} />
-            <Route path="/test" element={<h1>WhatTheFuck</h1>} />
             <Route path="/" element={<HomeScreen />} />
           </Routes>
         )}

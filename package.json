@@ -4,11 +4,12 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.2",
+    "@stripe/stripe-js": "^1.24.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.26.0",
-    "firebase": "^9.6.7",
+    "firebase": "^9.6.8",
     "firebase-tools": "^10.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

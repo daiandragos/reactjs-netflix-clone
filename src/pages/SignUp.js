@@ -6,9 +6,9 @@ import {
   // signOut,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import "./SignUpScreen.css";
+import "./SignUp.css";
 
-const SignUpScreen = () => {
+const SignUp = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
 
@@ -44,7 +44,7 @@ const SignUpScreen = () => {
   };
 
   return (
-    <div className="signupScreen">
+    <div className="signup-page">
       <form>
         <h1>Sign In</h1>
         <input ref={emailRef} placeholder="Email" type="email" />
@@ -53,8 +53,8 @@ const SignUpScreen = () => {
           Sign In
         </button>
         <h4>
-          <span className="signupScreen__gray">New to Netflix? </span>
-          <span className="signupScreen__link" onClick={register}>
+          <span className="signup-page__gray">New to Netflix? </span>
+          <span className="signup-page__link" onClick={register}>
             Sign Up now
           </span>
         </h4>
@@ -63,4 +63,4 @@ const SignUpScreen = () => {
   );
 };
 
-export default SignUpScreen;
+export default SignUp;
